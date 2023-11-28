@@ -1,7 +1,7 @@
 # Ansible-docker-container
 Explaination :
 
-- Pull Image Task:
+ Pull Image Task:
 
  - Name: "Pull image from Docker Hub"
 
@@ -17,7 +17,7 @@ Explaination :
 
   - timeout: 120: Sets a timeout of 120 seconds for pulling the image.
 
-- Launch Container Task:
+ Launch Container Task:
 
  - Name: "Launching container"
 
@@ -39,7 +39,7 @@ Explaination :
 
   - Registers the output of this task for debugging purposes.
 
-- Debug Task:
+ Debug Task:
 
  - Name: "Debug information about the Docker container"
 
