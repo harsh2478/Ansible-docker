@@ -1,0 +1,26 @@
+- name: "Docker container"
+  hosts: all
+  tasks:
+    - name: "Pull image from docker hub"
+      docker_image:
+        name: "vimal13/apache-webserver-php"
+        source: pull
+        state: present
+        timeout: 120
+
+
+    - name: "Launching container"
+      docker_container:
+        name: "my-apache-container"
+        image: "vimal13/apache-webserver-php"
+        state: present
+        labels:
+          Environment: "testing"
+        restart_policy: always
+        volumes:
+          - "/data"
+      register: output
+
+    - name: "inside docker"
+      debug:
+        var: output
